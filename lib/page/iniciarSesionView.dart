@@ -1,4 +1,7 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
+import '../utils/airtm_colors.dart';
 
 class IniciarSesionView extends StatefulWidget {
   @override
@@ -11,6 +14,7 @@ class _IniciarSesionViewState extends State<IniciarSesionView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         appBar: AppBar(
           elevation: 0.0,
           title: Text(
@@ -21,10 +25,10 @@ class _IniciarSesionViewState extends State<IniciarSesionView> {
               fontSize: 24,
             ),
           ),
-          backgroundColor: Color.fromRGBO(18, 122, 255, 1),
+          backgroundColor: AirtmColors.blue,
         ),
         body: Container(
-          color: Color.fromRGBO(18, 122, 255, 1),
+          color: AirtmColors.blue,
           child: Column(
             children: <Widget>[
               Padding(
@@ -64,6 +68,7 @@ class _IniciarSesionViewState extends State<IniciarSesionView> {
                           border: const OutlineInputBorder(
                               borderSide: BorderSide.none),
                         ),
+                        style: TextStyle(fontSize: 20, letterSpacing: 1.5),
                       )),
                   // End Textfield email
 
@@ -107,7 +112,7 @@ class _IniciarSesionViewState extends State<IniciarSesionView> {
                               icon: Icon(
                                 Icons.remove_red_eye,
                                 color: this._showPassword
-                                    ? Colors.blue
+                                    ? AirtmColors.blue
                                     : Colors.grey,
                               ),
                               onPressed: () {
@@ -117,6 +122,10 @@ class _IniciarSesionViewState extends State<IniciarSesionView> {
                           contentPadding: EdgeInsets.all(20),
                           border: const OutlineInputBorder(
                               borderSide: BorderSide.none),
+                        ),
+                        style: TextStyle(
+                          fontSize: 20,
+                          letterSpacing: 1.5,
                         ),
                       )),
                   // End Textfield password
@@ -154,7 +163,7 @@ class _IniciarSesionViewState extends State<IniciarSesionView> {
                       width: 250,
                       height: 50,
                       decoration: BoxDecoration(
-                        color: Color.fromRGBO(52, 67, 86, 1),
+                        color: AirtmColors.navyBlue,
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(50.5),
                         ),

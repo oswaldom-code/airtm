@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../utils/airtm_colors.dart';
 
 import '../graph_widget.dart';
 import 'IniciarView.dart';
@@ -8,7 +9,7 @@ class HomeScreen extends StatelessWidget {
   const HomeScreen({Key key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    AppBarTheme(color: Color.fromRGBO(52, 67, 86, 1));
+    AppBarTheme(color: AirtmColors.blue);
     return Scaffold(
       body: Column(
         children: <Widget>[

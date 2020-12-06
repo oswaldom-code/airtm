@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'home/homeScreen.dart';
+import 'page/homeScreen.dart';
 
 //import 'package:fl_chart/fl_chart.dart';
 
