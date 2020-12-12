@@ -278,164 +278,163 @@ class _IniciarViewState extends State<IniciarView> {
           children: <Widget>[
             Padding(
               padding: const EdgeInsets.all(20.0),
-              child: Column(children: <Widget>[
-                /// ---> Personal and business bottom
-                Container(
-                  width: double.infinity,
-                  //color: Colors.yellow,
-                  child: Expanded(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: <Widget>[
-                        Container(
-                          width: 150,
-                          height: 40,
-                          decoration: BoxDecoration(
-                            color: AirtmColors.white,
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(50.5),
-                            ),
-                          ),
-                          child: FlatButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: null),
-                              );
-                            },
-                            child: Text(
-                              'individual',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 14,
-                              ),
-                            ),
+              child: Container(
+                width: double.infinity,
+                //color: Colors.yellow,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: <Widget>[
+                    Container(
+                      width: 150,
+                      height: 40,
+                      decoration: BoxDecoration(
+                        color: AirtmColors.white,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(50.5),
+                        ),
+                      ),
+                      child: FlatButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: null),
+                          );
+                        },
+                        child: Text(
+                          'individual',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 14,
                           ),
                         ),
-                        Container(
-                          width: 150,
-                          height: 40,
-                          decoration: BoxDecoration(
-                            color: AirtmColors.white,
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(50.5),
-                            ),
-                          ),
-                          child: FlatButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: null),
-                              );
-                            },
-                            child: Text(
-                              'negocio',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 14,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
-                  ),
+                    Container(
+                      width: 150,
+                      height: 40,
+                      decoration: BoxDecoration(
+                        color: AirtmColors.white,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(50.5),
+                        ),
+                      ),
+                      child: FlatButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: null),
+                          );
+                        },
+                        child: Text(
+                          'negocio',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 14,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
+              ),
+            ),
 
-                /// End Personal and business bottom
+            /// End Personal and business bottom
 
-                SizedBox(
-                  height: 30,
-                ),
+            SizedBox(
+              height: 30,
+            ),
 ////////////////////////////////////////////////////////////
-                // --> Country help text
-                Container(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'País en el que vives',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
+            // --> Country help text
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Container(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'País en el que vives',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
-                // End Country help text
+              ),
+            ),
+            // End Country help text
 
-                SizedBox(
-                  height: 10,
-                ),
+            SizedBox(
+              height: 10,
+            ),
 
-                Container(
-                  width: 400,
-                  height: 40,
-                  padding: EdgeInsets.all(2),
-                  decoration: BoxDecoration(
-                      color: AirtmColors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(10))),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: DropdownButton(
-                      isDense: true,
-                      hint: Text('Pais...'),
-                      isExpanded: true,
-                      elevation: 5,
-                      value: _countryValue,
-                      onChanged: (value) {
-                        setState(() {
-                          _countryValue = value;
-                        });
-                      },
-                      items: _country.map((value) {
-                        return DropdownMenuItem(
-                          value: value,
-                          child: Text(value),
-                        );
-                      }).toList(),
-                    ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Container(
+                margin: EdgeInsets.only(top: 0, left: 10),
+                //width: 400,
+                //height: 40,
+                //padding: EdgeInsets.all(2),
+                decoration: BoxDecoration(
+                    color: AirtmColors.white,
+                    borderRadius: BorderRadius.all(Radius.circular(10))),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: DropdownButton(
+                    isDense: true,
+                    hint: Text('Pais...'),
+                    isExpanded: true,
+                    elevation: 5,
+                    value: _countryValue,
+                    onChanged: (value) {
+                      setState(() {
+                        _countryValue = value;
+                      });
+                    },
+                    items: _country.map((value) {
+                      return DropdownMenuItem(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList(),
                   ),
-                )
-              ]),
+                ),
+              ),
             ),
 
             SizedBox(
-              height: 80,
+              height: 250,
             ),
 
             /// ---> Next and Create count with Google or Facebook bottom
-            Expanded(
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: <Widget>[
-                  Container(
-                    width: 250,
-                    height: 50,
-                    decoration: BoxDecoration(
-                      color: AirtmColors.navyBlue,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(50.5),
-                      ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Container(
+                  //color: Colors.cyan,
+
+                  width: 250,
+
+                  height: 50,
+
+                  decoration: BoxDecoration(
+                    color: AirtmColors.navyBlue,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(50.5),
                     ),
-                    child: FlatButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: null),
-                        );
-                      },
-                      child: Text(
-                        'Siguiente',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        ),
+                  ),
+
+                  child: FlatButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Siguiente',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
 
             // ---> SignIn Google an Facebook botoms

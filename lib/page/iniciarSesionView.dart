@@ -33,6 +33,7 @@ class _IniciarSesionViewState extends State<IniciarSesionView> {
             children: <Widget>[
               Padding(
                 padding: const EdgeInsets.all(20.0),
+                // ---> Text email
                 child: Column(children: <Widget>[
                   Container(
                     width: double.infinity,
